@@ -27,10 +27,10 @@ app.use('/api', ImageRouter)
 
 if(process.env.NODE_ENV === 'production'){
     console.log('called inside --d>',__dirname)
-    app.use(express.static(path.join(__dirname, '../client/react-app/dist')));
+    app.use(express.static(path.join(__dirname, '../client/dist')));
     app.get('*', (req, res) => {
         console.log('called inside 2 -->',__dirname)
-        res.sendFile(path.resolve(__dirname, '../client/react-app/dist/index.html'))
+        res.sendFile(path.resolve(__dirname, '../client/dist/index.html'))
     })
 }
 
