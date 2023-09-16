@@ -13,7 +13,7 @@ dotenv.config();
 app.use(cors())
 connectDB()
 
-const port = process.env.PORT || 5627
+const port = process.env.PORT || 5000
 app.use(express.json({
     limit: "30mb",
     extended: true
